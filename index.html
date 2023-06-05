@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"">
+        <title>Encriptador</title>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+        <script src="main.js"></script>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Montserrat:wght@300&display=swap');
+        </style>
+    </head>
+    <body>
+        <!--Imagen del logo-->
+        <header>
+            <div class="logoA">
+                <img src="assets/Vector.png" alt="Logo alura" id="logoA">
+            </div>
+        </header>
+        <main>
+            <!--Zona donde ingresan el texto a encriptar o desencriptar-->
+            <form action="" class="textoEncriptar">
+                <textarea class="textoCampo" id="textoCampo" cols="30" rows="10" required placeholder="Ingrese el texto aqui." ></textarea>
+                <!--<input type="text" class="textoCampo" id="textoCampo" required placeholder="Ingrese el texto aqui.">-->
+            </form>
+            <!--Icono de atención sobre los botones principales-->
+            <div class="atencion">
+                <p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-exclamation-circle-fill" viewBox="0 0 16 16">
+                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/></svg>
+                    Solo letras minúsculas y sin acentos.
+                </p>
+            </div>
+            <!--Botones de encriptar y desencriptar con funciones añadidas-->
+            <div class="botones">
+                <button class="encriptar" onclick="encriptarTexto()"><p>Encriptar</p></button>
+                <button class="desencriptar" onclick="desencriptarTexto()"><p>Desencriptar</p></button>
+            </div>
+            <!--Dibujar y crear el rectangulo-->
+            <div class="rectangulo"></div>
+            <!--Input de salida donde muestra el texto luego de la encriptación o traducido-->
+            <div class="textoSalida">
+                <textarea type="text" class="inputSalida" id="inputSalida" readonly cols="20" row="10"></textarea>
+                <!--<input type="text" class="inputSalida" id="inputSalida">-->
+            </div>
+            <!--Ilustracion y mensaje que solo se muestra cuando no se realizó ninguna actividad-->
+            <div class="salida" id="salida">
+                <img src="assets/Muñeco.png" alt="Muñeco dibujado cuando no existe texto" class="munieco" id="munieco">
+                <div class="noEncontrado" id="noEncontrado">
+                    <p>Ningún mensaje fue encontrado.</p>
+                    <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+                </div>
+            </div>
+            <!--Botón copiar-->
+            <div class="botonCopiar" id="botonCopiar">
+                <button class="copiar" id="copiar" onclick="copiarTexto()"><p>Copiar</p></button>
+            </div>
+        </main>
+        <!--Descripción persona como creador-->
+        <footer>
+            <p class="copyright">
+                Dev: Franco Joel Quijada.
+                &copy Alura challenge
+            </p>
+        </footer>
+    </body>
+</html>
